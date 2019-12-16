@@ -1,4 +1,4 @@
-package by.epam.pavelshakhlovich.papersxml.entity;
+package by.epam.pavelshakhlovich.paperxml.entity;
 
 public abstract class Paper {
     private String title;

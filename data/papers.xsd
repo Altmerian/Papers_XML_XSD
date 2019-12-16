@@ -2,7 +2,7 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
         targetNamespace="http://www.example.com/papers"
         xmlns:tns="http://www.example.com/papers"
-        elementFormDefault="qualified">     <!-- what is this?-->
+        elementFormDefault="qualified">
 
     <element name="paper" type="tns:Paper" abstract="true"/>
     <element name="newspaper" type="tns:Newspaper" substitutionGroup="tns:paper"/>
@@ -13,18 +13,23 @@
         <complexType>
             <sequence>
                 <element ref="tns:paper" minOccurs="2"
-                         maxOccurs="unbounded" />
+                         maxOccurs="unbounded"/>
             </sequence>
         </complexType>
     </element>
-
-
 
     <complexType name="Paper">
         <sequence>
             <element name="isGlossy" type="boolean"/>
             <element name="isColor" type="boolean"/>
-            <element name="pageCount" type="positiveInteger"/>
+            <element name="pageCount">
+            <simpleType>
+                <restriction base="integer">
+                    <minInclusive value="1"/>
+                    <maxInclusive value="10000"/>
+                </restriction>
+            </simpleType>
+            </element>
         </sequence>
         <attribute name="title" type="string" use="required"/>
         <attribute name="periodicity" default="uncertain" use="required">
@@ -43,6 +48,7 @@
         <complexContent>
             <extension base="tns:Paper">
                 <sequence>
+                    <element name="firstIssueDate" type="date"/>
                     <element name="hasWebVersion" type="boolean"/>
                 </sequence>
                 <attribute name="subscriptionIndex" type="ID" use="optional"/>
@@ -50,32 +56,30 @@
         </complexContent>
     </complexType>
 
-    <!-- TODO add fields -->
     <complexType name="Magazine">
         <complexContent>
             <extension base="tns:Paper">
                 <sequence>
-                    <element name="average-mark" type="double"/>
+                    <element name="firstIssueDate" type="date"/>
                 </sequence>
+                <attribute name="subscriptionIndex" type="ID" use="optional"/>
             </extension>
         </complexContent>
     </complexType>
 
-    <!-- TODO add fields -->
     <complexType name="Booklet">
         <complexContent>
             <extension base="tns:Paper">
                 <sequence>
-                    <element name="average-mark" type="double"/>
+                    <element name="author" type="string"/>
                 </sequence>
             </extension>
         </complexContent>
     </complexType>
 
-    <!-- TODO add regex -->
     <simpleType name="subscriptionIndex">
         <restriction base="ID">
-            <pattern value="(a-zA-Z){2}[a-zA-Z0-9]{4,12}"/>
+            <pattern value="[A-Z]{2}[0-9]{4,8}"/>
         </restriction>
     </simpleType>
 

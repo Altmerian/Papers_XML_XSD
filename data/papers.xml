@@ -1,20 +1,31 @@
-<?xml version="1.0" encoding  = "UTF-8" standalone  = "yes"?>
+<?xml version="1.0" encoding  = "UTF-8"?>
 <papers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xmlns="http://www.example.com/papers"
-           xsi:schemaLocation="http://www.epam.by/papers papers.xsd">
+           xsi:schemaLocation="http://www.example.com/papers papers.xsd">
 
-    <newspaper title="The New York Times" periodicity="daily" subscriptionIndex="BY220135">
+    <newspaper title="The New York Times" periodicity="daily" subscriptionIndex="US22013534">
         <isGlossy>false</isGlossy>
-        <isColor>false</isColor>
-        <pageCount>352</pageCount>
+        <isColor>true</isColor>
+        <pageCount>12</pageCount>
+        <firstIssueDate>1851-09-18</firstIssueDate>
         <hasWebVersion>true</hasWebVersion>
     </newspaper>
 
-    <newspaper title="The New York Times" periodicity="daily" subscriptionIndex="US220137">
+    <newspaper title="The Times" periodicity="daily" subscriptionIndex="UK220137">
         <isGlossy>false</isGlossy>
-        <isColor>false</isColor>
-        <pageCount>352</pageCount>
+        <isColor>true</isColor>
+        <pageCount>14</pageCount>
+        <firstIssueDate>1785-01-01</firstIssueDate>
         <hasWebVersion>true</hasWebVersion>
     </newspaper>
+
+    <magazine title="People" periodicity="weekly" subscriptionIndex="US56445654">
+        <isGlossy>false</isGlossy>
+        <isColor>true</isColor>
+        <pageCount>64</pageCount>
+        <firstIssueDate>1785-01-01</firstIssueDate>
+    </magazine>
+
+
 
 </papers>

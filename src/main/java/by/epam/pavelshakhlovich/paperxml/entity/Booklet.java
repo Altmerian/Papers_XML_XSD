@@ -1,4 +1,4 @@
-package by.epam.pavelshakhlovich.papersxml.entity;
+package by.epam.pavelshakhlovich.paperxml.entity;
 
 public class Booklet extends Paper {
     private String author;

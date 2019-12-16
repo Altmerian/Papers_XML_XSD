@@ -1,4 +1,4 @@
-package by.epam.pavelshakhlovich.papersxml.entity;
+package by.epam.pavelshakhlovich.paperxml.entity;
 
 public enum Periodicity {
     DAILY,
