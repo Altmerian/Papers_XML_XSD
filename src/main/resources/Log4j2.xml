@@ -9,9 +9,16 @@
             </PatternLayout>
             <Policies>
                 <TimeBasedTriggeringPolicy/>
-                <SizeBasedTriggeringPolicy size="25 KB"/>
+                <SizeBasedTriggeringPolicy size="40 KB"/>
             </Policies>
-            <DefaultRolloverStrategy max="10"/>
+            <DefaultRolloverStrategy max="10">
+                <Delete basePath="${baseDir}" maxDepth="2">
+                    <IfFileName glob="*/app-*.log">
+                        <IfAccumulatedFileSize exceeds="20 MB"/>
+                        <IfAccumulatedFileCount exceeds="10"/>
+                    </IfFileName>
+                </Delete>
+            </DefaultRolloverStrategy>
         </RollingFile>
 
         <Console name="Console" target="SYSTEM_OUT">

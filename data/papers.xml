@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding  = "UTF-8" standalone  = "yes"?>
+<papers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns="http://www.example.com/papers"
+           xsi:schemaLocation="http://www.epam.by/papers papers.xsd">
+
+    <newspaper title="The New York Times" periodicity="daily" subscriptionIndex="BY220135">
+        <isGlossy>false</isGlossy>
+        <isColor>false</isColor>
+        <pageCount>352</pageCount>
+        <hasWebVersion>true</hasWebVersion>
+    </newspaper>
+
+    <newspaper title="The New York Times" periodicity="daily" subscriptionIndex="US220137">
+        <isGlossy>false</isGlossy>
+        <isColor>false</isColor>
+        <pageCount>352</pageCount>
+        <hasWebVersion>true</hasWebVersion>
+    </newspaper>
+
+</papers>
