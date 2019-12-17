@@ -34,8 +34,8 @@ public class JaxBDemo {
 
             //Setup schema validator
             SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-            Schema employeeSchema = sf.newSchema(new File(xsdFile));
-            jaxbUnmarshaller.setSchema(employeeSchema);
+            Schema paperSchema = sf.newSchema(new File(xsdFile));
+            jaxbUnmarshaller.setSchema(paperSchema);
 
             //Unmarshal xml file
             DataObject dataObject = (DataObject) jaxbUnmarshaller.unmarshal(new File(xmlFile));

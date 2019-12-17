@@ -1,5 +1,12 @@
 package by.epam.pavelshakhlovich.paperxml.entity;
 
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "employee")
+@XmlAccessorType(XmlAccessType.FIELD)
 public abstract class Paper {
     private String title;
     private Periodicity periodicity;
