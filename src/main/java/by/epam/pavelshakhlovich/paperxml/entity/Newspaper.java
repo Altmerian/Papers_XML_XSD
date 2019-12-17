@@ -21,4 +21,12 @@ public class Newspaper extends Paper {
     public int getSubscriptionIndex() {
         return subscriptionIndex;
     }
+
+    @Override
+    public String toString() {
+        return "Newspaper{" + super.toString() +
+                "hasWebVersion=" + hasWebVersion +
+                ", subscriptionIndex=" + subscriptionIndex +
+                '}';
+    }
 }

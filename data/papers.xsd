@@ -32,7 +32,7 @@
             </element>
         </sequence>
         <attribute name="title" type="string" use="required"/>
-        <attribute name="periodicity" default="uncertain" use="required">
+        <attribute name="periodicity" default="uncertain" use="optional">
             <simpleType>
                 <restriction base="string">
                     <enumeration value="daily"/>

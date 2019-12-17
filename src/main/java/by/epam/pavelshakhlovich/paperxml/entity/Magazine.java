@@ -15,4 +15,11 @@ public class Magazine extends Paper {
     public int getSubscriptionIndex() {
         return subscriptionIndex;
     }
+
+    @Override
+    public String toString() {
+        return "Magazine{" + super.toString() +
+                "subscriptionIndex=" + subscriptionIndex +
+                '}';
+    }
 }

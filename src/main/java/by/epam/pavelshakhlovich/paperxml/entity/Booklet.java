@@ -14,4 +14,11 @@ public class Booklet extends Paper {
     public String getAuthor() {
         return author;
     }
+
+    @Override
+    public String toString() {
+        return "Booklet{" + super.toString() +
+                "author='" + author + '\'' +
+                '}';
+    }
 }

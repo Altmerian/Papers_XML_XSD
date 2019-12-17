@@ -37,4 +37,15 @@ public abstract class Paper {
     public int getPageCount() {
         return pageCount;
     }
+
+    @Override
+    public String toString() {
+        return "Paper{" +
+                "title='" + title + '\'' +
+                ", periodicity=" + periodicity +
+                ", isGlossy=" + isGlossy +
+                ", isColor=" + isColor +
+                ", pageCount=" + pageCount +
+                '}';
+    }
 }
