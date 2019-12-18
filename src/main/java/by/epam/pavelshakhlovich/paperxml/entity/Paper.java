@@ -1,18 +1,27 @@
 package by.epam.pavelshakhlovich.paperxml.entity;
 
+import javax.xml.bind.annotation.*;
+import java.util.Arrays;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-
-@XmlRootElement(name = "employee")
 @XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Paper", propOrder = {
+        "isGlossy",
+        "isColor",
+        "pageCount"
+})
+@XmlSeeAlso({
+        Newspaper.class,
+        Booklet.class,
+        Magazine.class
+})
 public abstract class Paper {
-    private String title;
-    private Periodicity periodicity;
-    private boolean isGlossy;
-    private boolean isColor;
-    private int pageCount;
+    protected boolean isGlossy;
+    protected boolean isColor;
+    protected int pageCount;
+    @XmlAttribute(name = "title", required = true)
+    protected String title;
+    @XmlAttribute(name = "periodicity")
+    protected Periodicity periodicity;
 
     public Paper() {
     }
@@ -25,26 +34,6 @@ public abstract class Paper {
         this.pageCount = size;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public Periodicity getPeriodicity() {
-        return periodicity;
-    }
-
-    public boolean isGlossy() {
-        return isGlossy;
-    }
-
-    public boolean isColor() {
-        return isColor;
-    }
-
-    public int getPageCount() {
-        return pageCount;
-    }
-
     @Override
     public String toString() {
         return "Paper{" +
@@ -55,4 +44,51 @@ public abstract class Paper {
                 ", pageCount=" + pageCount +
                 '}';
     }
+
+    public boolean isGlossy() {
+        return isGlossy;
+    }
+
+    public void setIsGlossy(boolean value) {
+        this.isGlossy = value;
+    }
+
+    public boolean isColor() {
+        return isColor;
+    }
+
+    public void setIsColor(boolean value) {
+        this.isColor = value;
+    }
+
+    public int getPageCount() {
+        return pageCount;
+    }
+
+    public void setPageCount(int value) {
+        this.pageCount = value;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String value) {
+        this.title = value;
+    }
+
+    public Periodicity getPeriodicity() {
+        if (periodicity == null) {
+            return Periodicity.UNCERTAIN;
+        } else {
+            return periodicity;
+        }
+    }
+
+    public void setPeriodicity(String value) {
+        this.periodicity = Arrays.stream(Periodicity.values())
+                .filter(x -> x.name().equalsIgnoreCase(value))
+                .findAny().get();
+    }
+
 }

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding  = "UTF-8"?>
-<papers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<Papers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xmlns="http://www.example.com/papers"
            xsi:schemaLocation="http://www.example.com/papers papers.xsd">
 
     <newspaper title="The New York Times" periodicity="daily" subscriptionIndex="US22013534">
         <isGlossy>false</isGlossy>
         <isColor>true</isColor>
-        <pageCount>12</pageCount>
+        <pageCount>15</pageCount>
         <firstIssueDate>1851-09-18</firstIssueDate>
         <hasWebVersion>true</hasWebVersion>
     </newspaper>
@@ -27,4 +27,4 @@
     </magazine>
 
 
-</papers>
+</Papers>

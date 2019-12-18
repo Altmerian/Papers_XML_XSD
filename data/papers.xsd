@@ -9,7 +9,7 @@
     <element name="magazine" type="tns:Magazine" substitutionGroup="tns:paper"/>
     <element name="booklet" type="tns:Booklet" substitutionGroup="tns:paper"/>
 
-    <element name="papers">
+    <element name="Papers">
         <complexType>
             <sequence>
                 <element ref="tns:paper" minOccurs="2"
@@ -22,14 +22,7 @@
         <sequence>
             <element name="isGlossy" type="boolean"/>
             <element name="isColor" type="boolean"/>
-            <element name="pageCount">
-            <simpleType>
-                <restriction base="integer">
-                    <minInclusive value="1"/>
-                    <maxInclusive value="10000"/>
-                </restriction>
-            </simpleType>
-            </element>
+            <element name="pageCount"/>
         </sequence>
         <attribute name="title" type="string" use="required"/>
         <attribute name="periodicity" default="uncertain" use="optional">
@@ -76,6 +69,13 @@
             </extension>
         </complexContent>
     </complexType>
+
+    <simpleType name="pageCount">
+        <restriction base="integer">
+            <minInclusive value="1"/>
+            <maxInclusive value="10000"/>
+        </restriction>
+    </simpleType>
 
     <simpleType name="subscriptionIndex">
         <restriction base="ID">

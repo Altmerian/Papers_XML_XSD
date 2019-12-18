@@ -1,9 +1,14 @@
 package by.epam.pavelshakhlovich.paperxml.entity;
 
-public enum Periodicity {
-    DAILY,
-    WEEKLY,
-    MONTHLY,
-    UNCERTAIN;
+import javax.xml.bind.annotation.XmlEnum;
+import javax.xml.bind.annotation.XmlEnumValue;
+import javax.xml.bind.annotation.XmlType;
 
+@XmlType
+@XmlEnum(String.class)
+public enum Periodicity {
+    @XmlEnumValue("daily") DAILY,
+    @XmlEnumValue("weekly") WEEKLY,
+    @XmlEnumValue("monthly") MONTHLY,
+    @XmlEnumValue("uncertain") UNCERTAIN
 }
