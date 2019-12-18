@@ -52,10 +52,10 @@ public class DataObject {
 
     @Override
     public String toString() {
-        return "Papers = " +
+        return "Papers:\n " +
                 papers.stream()
                         .map(x -> x.getValue().toString())
-                        .collect(Collectors.joining(", "));
+                        .collect(Collectors.joining("; "));
 
     }
 }

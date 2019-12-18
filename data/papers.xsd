@@ -12,7 +12,7 @@
     <element name="Papers">
         <complexType>
             <sequence>
-                <element ref="tns:paper" minOccurs="2"
+                <element ref="tns:paper" minOccurs="16"
                          maxOccurs="unbounded"/>
             </sequence>
         </complexType>

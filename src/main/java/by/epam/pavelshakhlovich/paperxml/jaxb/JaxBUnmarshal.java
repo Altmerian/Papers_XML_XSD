@@ -1,4 +1,4 @@
-package by.epam.pavelshakhlovich.paperxml.jaxbdemo;
+package by.epam.pavelshakhlovich.paperxml.jaxb;
 
 import by.epam.pavelshakhlovich.paperxml.dataobject.DataObject;
 import org.xml.sax.SAXException;
@@ -11,8 +11,8 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import java.io.File;
 
-public class JaxBDemo {
-    public static void main(String[] args) {
+public class JaxBUnmarshal {
+    public static void unmarshalPapers(String[] args) {
 
         String xmlFile = "data/papers.xml";
         String xsdFile = "data/papers.xsd";

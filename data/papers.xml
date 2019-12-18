@@ -11,6 +11,13 @@
         <hasWebVersion>true</hasWebVersion>
     </newspaper>
 
+    <magazine title="Vogue" periodicity="weekly" subscriptionIndex="US565445654">
+        <isGlossy>true</isGlossy>
+        <isColor>true</isColor>
+        <pageCount>72</pageCount>
+        <firstIssueDate>1892-12-17</firstIssueDate>
+    </magazine>
+
     <newspaper title="The Times" periodicity="daily" subscriptionIndex="UK220137">
         <isGlossy>false</isGlossy>
         <isColor>true</isColor>
@@ -20,11 +27,99 @@
     </newspaper>
 
     <magazine title="People" periodicity="weekly" subscriptionIndex="US56445654">
-        <isGlossy>false</isGlossy>
+        <isGlossy>true</isGlossy>
         <isColor>true</isColor>
         <pageCount>64</pageCount>
-        <firstIssueDate>1785-01-01</firstIssueDate>
+        <firstIssueDate>1974-03-04</firstIssueDate>
     </magazine>
 
+    <booklet title="The Art Of War">
+        <isGlossy>true</isGlossy>
+        <isColor>true</isColor>
+        <pageCount>62</pageCount>
+        <author>Sun Tzu</author>
+    </booklet>
+
+    <magazine title="National Geographic" periodicity="monthly" subscriptionIndex="US512335654">
+        <isGlossy>true</isGlossy>
+        <isColor>true</isColor>
+        <pageCount>96</pageCount>
+        <firstIssueDate>1888-09-22</firstIssueDate>
+    </magazine>
+
+    <newspaper title="Daily Mirror" periodicity="daily" subscriptionIndex="UK450137">
+        <isGlossy>false</isGlossy>
+        <isColor>true</isColor>
+        <pageCount>18</pageCount>
+        <firstIssueDate>1903-11-02</firstIssueDate>
+        <hasWebVersion>true</hasWebVersion>
+    </newspaper>
+
+    <newspaper title="Pravda" periodicity="daily" subscriptionIndex="RU125468">
+        <isGlossy>false</isGlossy>
+        <isColor>false</isColor>
+        <pageCount>24</pageCount>
+        <firstIssueDate>1912-05-05</firstIssueDate>
+        <hasWebVersion>true</hasWebVersion>
+    </newspaper>
+
+    <magazine title="Murzilka" periodicity="monthly" subscriptionIndex="RU554654">
+        <isGlossy>false</isGlossy>
+        <isColor>true</isColor>
+        <pageCount>24</pageCount>
+        <firstIssueDate>1924-05-16</firstIssueDate>
+    </magazine>
+
+    <booklet title="Very Good Lives">
+        <isGlossy>false</isGlossy>
+        <isColor>false</isColor>
+        <pageCount>81</pageCount>
+        <author>J.K. Rowling</author>
+    </booklet>
+
+    <newspaper title="Argumenty i Fakty" periodicity="weekly" subscriptionIndex="RU145668">
+        <isGlossy>false</isGlossy>
+        <isColor>true</isColor>
+        <pageCount>16</pageCount>
+        <firstIssueDate>1978-01-01</firstIssueDate>
+        <hasWebVersion>true</hasWebVersion>
+    </newspaper>
+
+    <booklet title="A Room of One’s Own">
+        <isGlossy>false</isGlossy>
+        <isColor>false</isColor>
+        <pageCount>148</pageCount>
+        <author>Virginia Woolf</author>
+    </booklet>
+
+    <newspaper title="Trud" periodicity="daily" subscriptionIndex="RU685465">
+        <isGlossy>false</isGlossy>
+        <isColor>true</isColor>
+        <pageCount>8</pageCount>
+        <firstIssueDate>1978-01-01</firstIssueDate>
+        <hasWebVersion>true</hasWebVersion>
+    </newspaper>
+
+    <magazine title="Men's Health" periodicity="monthly" subscriptionIndex="US512754654">
+        <isGlossy>true</isGlossy>
+        <isColor>true</isColor>
+        <pageCount>64</pageCount>
+        <firstIssueDate>1986-01-01</firstIssueDate>
+    </magazine>
+
+    <booklet title="Brokeback Mountain">
+        <isGlossy>false</isGlossy>
+        <isColor>false</isColor>
+        <pageCount>64</pageCount>
+        <author>Annie Proulx</author>
+    </booklet>
+
+    <newspaper title="Sovetsky Sport" periodicity="daily" subscriptionIndex="RU545765">
+        <isGlossy>false</isGlossy>
+        <isColor>false</isColor>
+        <pageCount>16</pageCount>
+        <firstIssueDate>1924-07-20</firstIssueDate>
+        <hasWebVersion>true</hasWebVersion>
+    </newspaper>
 
 </Papers>

@@ -23,8 +23,8 @@ public class Booklet extends Paper {
 
     @Override
     public String toString() {
-        return "Booklet{" + super.toString() +
-                "author='" + author + '\'' +
+        return "Booklet {" + super.toString() +
+                ", author='" + author + '\'' +
                 '}';
     }
 

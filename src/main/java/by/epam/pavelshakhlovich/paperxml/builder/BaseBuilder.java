@@ -8,12 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class BaseBuilder {
-    protected List<Paper> papersList= new ArrayList<>();
-    private static final Logger LOGGER = LogManager.getLogger();
+    protected static final Logger LOGGER = LogManager.getLogger();
+    protected List<Paper> papersList = new ArrayList<>();
+
+    public abstract void buildPaperList();
 
     public List<Paper> getPapersList() {
         return papersList;
     }
-
-    public abstract void buildPaperList();
 }

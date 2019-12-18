@@ -1,5 +1,7 @@
 package by.epam.pavelshakhlovich.paperxml.entity;
 
+import com.sun.org.apache.xerces.internal.jaxp.datatype.XMLGregorianCalendarImpl;
+
 import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -30,8 +32,9 @@ public class Magazine extends Paper {
 
     @Override
     public String toString() {
-        return "Magazine{" + super.toString() +
-                "subscriptionIndex=" + subscriptionIndex +
+        return "Magazine {" + super.toString() +
+                ", firstIssueDate=" + firstIssueDate +
+                ", subscriptionIndex=" + subscriptionIndex +
                 '}';
     }
 
@@ -39,8 +42,15 @@ public class Magazine extends Paper {
         return firstIssueDate;
     }
 
-    public void setFirstIssueDate(XMLGregorianCalendar value) {
-        this.firstIssueDate = value;
+    public void setFirstIssueDate(String s) {
+        XMLGregorianCalendar date = new XMLGregorianCalendarImpl();
+        String year = s.substring(0, 4);
+        date.setYear(Integer.parseInt(year));
+        String month = s.substring(5, 7);
+        date.setMonth(Integer.parseInt(month));
+        String day = s.substring(8);
+        date.setDay(Integer.parseInt(day));
+        this.firstIssueDate = date;
     }
 
     public String getSubscriptionIndex() {

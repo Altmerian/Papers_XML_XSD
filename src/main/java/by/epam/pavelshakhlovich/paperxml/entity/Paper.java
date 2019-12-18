@@ -17,6 +17,8 @@ import java.util.Arrays;
 public abstract class Paper {
     protected boolean isGlossy;
     protected boolean isColor;
+    @XmlElement(required = true)
+    @XmlSchemaType(name = "integer")
     protected int pageCount;
     @XmlAttribute(name = "title", required = true)
     protected String title;
@@ -36,13 +38,11 @@ public abstract class Paper {
 
     @Override
     public String toString() {
-        return "Paper{" +
-                "title='" + title + '\'' +
+        return "title='" + title + '\'' +
                 ", periodicity=" + periodicity +
                 ", isGlossy=" + isGlossy +
                 ", isColor=" + isColor +
-                ", pageCount=" + pageCount +
-                '}';
+                ", pageCount=" + pageCount;
     }
 
     public boolean isGlossy() {
