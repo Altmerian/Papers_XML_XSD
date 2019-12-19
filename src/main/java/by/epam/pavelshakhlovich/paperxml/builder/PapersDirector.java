@@ -4,9 +4,9 @@ import by.epam.pavelshakhlovich.paperxml.entity.Paper;
 
 import java.util.List;
 
-public class Director {
-    public static List<Paper> createPaperList(BaseBuilder builder) {
+public class PapersDirector {
+    public static List<Paper> createPaperList(BasePapersBuilder builder) {
         builder.buildPaperList();
-        return builder.getPapersList();
+        return builder.getPapers();
     }
 }

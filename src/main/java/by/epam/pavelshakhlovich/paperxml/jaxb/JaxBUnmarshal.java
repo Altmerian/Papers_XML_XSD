@@ -1,6 +1,6 @@
 package by.epam.pavelshakhlovich.paperxml.jaxb;
 
-import by.epam.pavelshakhlovich.paperxml.dataobject.DataObject;
+import by.epam.pavelshakhlovich.paperxml.dataobject.PapersDataObject;
 import org.xml.sax.SAXException;
 
 import javax.xml.XMLConstants;
@@ -26,8 +26,8 @@ public class JaxBUnmarshal {
             Schema paperSchema = sf.newSchema(new File(xsdFile));
             jaxbUnmarshaller.setSchema(paperSchema);
 
-            DataObject dataObject = (DataObject) jaxbUnmarshaller.unmarshal(new File(xmlFile));
-            System.out.println(dataObject);
+            PapersDataObject papersDataObject = (PapersDataObject) jaxbUnmarshaller.unmarshal(new File(xmlFile));
+            System.out.println(papersDataObject);
         } catch (JAXBException | SAXException e) {
             e.printStackTrace();
         }

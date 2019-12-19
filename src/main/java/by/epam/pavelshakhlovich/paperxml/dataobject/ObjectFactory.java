@@ -36,8 +36,8 @@ public class ObjectFactory {
     public ObjectFactory() {
     }
 
-    public DataObject createPapers() {
-        return new DataObject();
+    public PapersDataObject createPapers() {
+        return new PapersDataObject();
     }
 
     public Newspaper createNewspaper() {

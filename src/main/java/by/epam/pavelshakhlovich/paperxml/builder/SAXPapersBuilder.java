@@ -9,7 +9,7 @@ import org.xml.sax.helpers.XMLReaderFactory;
 import java.io.IOException;
 import java.util.EnumSet;
 
-public class SAXBuilder extends BaseBuilder {
+public class SAXPapersBuilder extends BasePapersBuilder {
 
     @Override
     public void buildPaperList() {
@@ -61,7 +61,7 @@ public class SAXBuilder extends BaseBuilder {
 
         public void endElement(String uri, String localName, String qName) {
             if (localName.equals("newspaper") || localName.equals("magazine") || localName.equals("booklet")) {
-                papersList.add(paper);
+                papers.add(paper);
             }
         }
 
@@ -100,11 +100,11 @@ public class SAXBuilder extends BaseBuilder {
         }
 
         public void startDocument() throws SAXException {
-            LOGGER.info("Parsing started.");
+            LOGGER.info("SAX parsing started.");
         }
 
         public void endDocument() throws SAXException {
-            LOGGER.info("Parsing ended.");
+            LOGGER.info("SAX parsing ended.");
         }
 
         public void warning(SAXParseException exception) {

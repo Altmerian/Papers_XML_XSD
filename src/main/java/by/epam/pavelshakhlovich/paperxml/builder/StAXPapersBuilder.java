@@ -1,6 +1,6 @@
 package by.epam.pavelshakhlovich.paperxml.builder;
 
-public class DOMBuilder extends BaseBuilder {
+public class StAXPapersBuilder extends BasePapersBuilder {
 
     @Override
     public void buildPaperList() {

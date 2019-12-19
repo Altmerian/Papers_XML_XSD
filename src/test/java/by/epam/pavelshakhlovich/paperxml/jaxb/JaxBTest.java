@@ -1,6 +1,6 @@
 package by.epam.pavelshakhlovich.paperxml.jaxb;
 
-import by.epam.pavelshakhlovich.paperxml.dataobject.DataObject;
+import by.epam.pavelshakhlovich.paperxml.dataobject.PapersDataObject;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
@@ -31,9 +31,9 @@ public class JaxBTest {
             Schema paperSchema = sf.newSchema(new File(XSD_FILE));
             jaxbUnmarshaller.setSchema(paperSchema);
 
-            DataObject dataObject = (DataObject) jaxbUnmarshaller.unmarshal(new File(XML_FILE));
-            LOGGER.info(dataObject);
-            Assert.assertNotNull(dataObject);
+            PapersDataObject papersDataObject = (PapersDataObject) jaxbUnmarshaller.unmarshal(new File(XML_FILE));
+            LOGGER.info(papersDataObject);
+            Assert.assertNotNull(papersDataObject);
 
         } catch (JAXBException e) {
             LOGGER.error("JAXBException " + e);

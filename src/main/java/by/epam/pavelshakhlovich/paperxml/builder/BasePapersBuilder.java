@@ -7,13 +7,13 @@ import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class BaseBuilder {
+public abstract class BasePapersBuilder {
     protected static final Logger LOGGER = LogManager.getLogger();
-    protected List<Paper> papersList = new ArrayList<>();
+    protected List<Paper> papers = new ArrayList<>();
 
     public abstract void buildPaperList();
 
-    public List<Paper> getPapersList() {
-        return papersList;
+    public List<Paper> getPapers() {
+        return papers;
     }
 }

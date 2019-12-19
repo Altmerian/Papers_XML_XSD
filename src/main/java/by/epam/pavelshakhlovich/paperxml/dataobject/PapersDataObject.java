@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
         "papers"
 })
 @XmlRootElement(name = "Papers")
-public class DataObject {
+public class PapersDataObject {
     @XmlElementRef(name = "paper", namespace = "http://www.example.com/papers", type = JAXBElement.class)
     protected List<JAXBElement<? extends Paper>> papers;
 
